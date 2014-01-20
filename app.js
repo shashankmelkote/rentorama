@@ -3,11 +3,9 @@ var app = express();
 var path = require('path');
 var nodemailer = require('nodemailer');
 var MemoryStore = require('connect').session.MemoryStore;
-var Grid = require('gridfs-stream');
 var fs = require("fs");
 var AWS = require('aws-sdk');
 var uuid = require('node-uuid');
-var formidable = require("formidable");
 //Import the data layer
 
 var mongoose = require('mongoose');
@@ -271,51 +269,6 @@ app.post("/uploadImage", function (req, res) {
 
     console.log("uploading image");
 
-    /*var form = new formidable.IncomingForm();
-    console.log("about to parse");
-
-    form.parse(req, function(error, fields, files){
-
-        console.log("parsing done");
-
-        if(error){
-            console.log(error);
-            res.send(400);
-        } else {
-
-            console.log(files);
-            console.log(files.upload);
-
-            var filePath = files.upload.path;
-
-            var fileName = uuid.v4();
-
-            //fs.readFile('/Users/shashankmelkote1/Desktop/interior_3.jpeg', function (err, data) {
-            fs.readFile(filePath, function (err, data) {
-                if (err) {
-                    console.warn(err);
-                }
-                else {
-                    console.log("uploading file")
-                    var params = {Bucket: 'rentorama', Key: fileName, Body: data};
-
-                    s3.putObject(params, function (err, data) {
-
-                        if (err) {
-                            console.log(err)
-                        } else {
-                            console.log("Successfully uploaded image");
-                            Apartment.uploadImage(req.session.email, fileName);
-                        }
-                    });
-                }
-            });
-        }
-
-    });*/
-
-    console.log("param file : " +JSON.stringify(req.param('file',null)));
-
     console.log("files output " + JSON.stringify(req.files));
 
     var filePath = req.files.files[0].path;
@@ -326,7 +279,6 @@ app.post("/uploadImage", function (req, res) {
 
 
 
-    //fs.readFile('/Users/shashankmelkote1/Desktop/interior_3.jpeg', function (err, data) {
     fs.readFile(filePath, function (err, data) {
         if (err) {
             console.warn(err);
