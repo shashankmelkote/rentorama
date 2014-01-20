@@ -1,0 +1,36 @@
+/**
+ * New node file
+ */
+
+
+define(['text!templates/login.html'], function(loginTemplate) { 
+	var loginView = Backbone.View.extend({
+		//el: $('#loginArea'),
+		
+		events: {
+			"submit form": "login"
+		},
+		
+		login: function() { 
+			$.post('/login', {
+				email: $('input[name=userid]').val(),
+				password: $('input[name=password]').val() 
+			}, 
+			function(data) {
+				console.log(data);
+				window.location.hash = 'index';
+			}).error(function(){
+				$("#error").text('Unable to login.');
+				$("#error").slideDown();
+			});
+			return false; 
+		},
+		
+		render: function() { 
+			this.$el.html(loginTemplate);
+			$("#error").hide();
+			this.delegateEvents();
+		} 
+	});
+	return loginView; 
+});

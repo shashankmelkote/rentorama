@@ -1,0 +1,157 @@
+<script type="text/template" id="apartment-facilities-template">
+    <style type="text/css">
+        ul {
+            list-style: none;
+            display: inline-block;
+            margin-left: 30%;
+            margin-right: 30%;
+        }
+
+        .col li {
+            margin: 10px;
+        }
+
+        .col {
+            display: inline;
+            float: left;
+        }
+
+    </style>
+    <form class="uploadAptFacilities">
+        <ul>
+            <div class="col">
+                <li>
+                    <input type="checkbox" name="facilities" id="dogs" <%= user ? 'checked' : '' %>/>
+                    <label for="dogs" >Dogs Allowed</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="facilities" id="cats" <%= user ? 'checked' : '' %>/>
+                    <label for="cats" >Cats Allowed</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="facilities" id="pets" <%= user ? 'checked' : '' %>/>
+                    <label for="pets" >Pet Friendly</label>
+                </li>
+            </div>
+            <div class="col">
+                <li>
+                    <input type="checkbox" name="facilities" id="onSiteLaundry" <%= user ? 'checked' : '' %>/>
+                    <label for="onSiteLaundry" >On-Site Laundry</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="facilities" id="inUnitLaundry" <%= user ? 'checked' : '' %>/>
+                    <label for="inUnitLaundry" >In Unit Laundry</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="facilities" id="laundryConnection" <%= user ? 'checked' : '' %>/>
+                    <label for="laundryConnection" >Washer/Dryer Connection</label>
+                </li>
+            </div>
+            <div class="col">
+                <li>
+                    <input type="checkbox" name="facilities" id="garage" <%= user ? 'checked' : '' %>/>
+                    <label for="garage" >Garage</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="facilities" id="bus" <%= user ? 'checked' : '' %>/>
+                    <label for="bus" >Bus Connection</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="facilities" id="subway" <%= user ? 'checked' : '' %>/>
+                    <label for="subway" >Subway Connection</label>
+                </li>
+            </div>
+            <div class="col">
+                <li>
+                    <input type="checkbox" name="facilities" id="decorativeFireplace" <%= user ? 'checked' : '' %>/>
+                    <label for="decorativeFireplace" >Decorative Fireplace</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="facilities" id="functionFireplace" <%= user ? 'checked' : '' %>/>
+                    <label for="functionFireplace" >Functional Fireplace</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="facilities" id="bathtub" <%= user ? 'checked' : '' %>/>
+                    <label for="bathtub" >Bathtub</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="facilities" id="doorman" <%= user ? 'checked' : '' %>/>
+                    <label for="doorman" >Doorman</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="facilities" id="dishwasher" <%= user ? 'checked' : '' %>/>
+                    <label for="dishwasher" >Dishwasher</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="facilities" id="balcony" <%= user ? 'checked' : '' %>/>
+                    <label for="balcony" >Balcony/Deck/Patio</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="facilities" id="hardwoodFloors" <%= user ? 'checked' : '' %>/>
+                    <label for="hardwoodFloors" >Hardwood Floors</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="facilities" id="furnished" <%= user ? 'checked' : '' %>/>
+                    <label for="furnished" >Furnished</label>
+                </li>
+            </div>
+            <div class="col">
+                <li>
+                    <input type="checkbox" name="facilities" id="dogs" <%= user ? 'checked' : '' %>/>
+                    <label for="dogs" >Elevator</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="facilities" id="cats" <%= user ? 'checked' : '' %>/>
+                    <label for="cats" >Wheelchair Accessible</label>
+                </li>
+            </div>
+            <div class="col">
+                <li>
+                    <input type="checkbox" name="facilities" id="dogs" <%= user ? 'checked' : '' %>/>
+                    <label for="dogs" >Air Conditioning</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="facilities" id="cats" <%= user ? 'checked' : '' %>/>
+                    <label for="cats" >Heat</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="facilities" id="pets" <%= user ? 'checked' : '' %>/>
+                    <label for="pets" >Ceiling Fan</label>
+                </li>
+            </div>
+            <div class="col">
+                <li>
+                    <input type="checkbox" name="facilities" id="onSiteLaundry" <%= user ? 'checked' : '' %>/>
+                    <label for="onSiteLaundry" >Swimming Pool</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="facilities" id="inUnitLaundry" <%= user ? 'checked' : '' %>/>
+                    <label for="inUnitLaundry" >Spa</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="facilities" id="laundryConnection" <%= user ? 'checked' : '' %>/>
+                    <label for="laundryConnection" >Gym</label>
+                </li>
+            </div>
+            <div class="col">
+                <li>
+                    <input type="checkbox" name="facilities" id="garage" <%= user ? 'checked' : '' %>/>
+                    <label for="garage" >Apartment</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="facilities" id="bus" <%= user ? 'checked' : '' %>/>
+                    <label for="bus" >Condo</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="facilities" id="subway" <%= user ? 'checked' : '' %>/>
+                    <label for="subway" >House</label>
+                </li>
+            </div>
+            <div class="col">
+                <li>
+                    <input type="submit" value="Register">
+                </li>
+            </div>
+        </ul>
+    </form>
+</script>

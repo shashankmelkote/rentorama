@@ -1,0 +1,35 @@
+<script type="text/template" id="apartment-images-template">
+    <style type="text/css">
+        ul {
+            list-style: none;
+            display: inline-block;
+            margin-left: 30%;
+            margin-right: 30%;
+        }
+
+        .col li {
+            margin: 10px;
+        }
+
+        .col {
+            display: inline;
+            float: left;
+        }
+
+    </style>
+    <form class="uploadAptFacilities">
+        <ul>
+            <div class="col">
+                <li>
+                    <input type="image" name="facilities" id="img"  <%= user ? 'checked' : '' %>/>
+                    <label for="img" >image</label>
+                </li>
+            </div>
+            <div class="col">
+                <li>
+                    <input type="submit" value="Register">
+                </li>
+            </div>
+        </ul>
+    </form>
+</script>

@@ -1,0 +1,59 @@
+<script type="text/template" id="apartment-address-template">
+	<style type="text/css">
+		ul {
+			list-style: none;
+			display: inline-block;
+			margin-left: 30%;
+			margin-right: 30%;
+		}
+
+		.col li {
+			margin: 10px;
+		}
+
+		.col {
+			display: inline;
+			float: left;
+		}
+
+	</style>
+	<form class="uploadApt">
+		<ul align="right">
+			<div class="col">
+				<li>
+					<label for="stno">Number</label>
+					<input type="text" name="stno" 
+					value="<%= user.address && user.address.houseno ? user.address.houseno : '' %>"  required>
+				</li>
+				<li>
+					<label for="streetName">Street Name</label>
+					<input type="text" name="streetName" 
+					value="<%= user.address && user.address.street ? user.address.street : '' %>"  required>
+				</li>
+				<li>
+					<label for="aptNo">Apartment Number</label>
+					<input type="text" name="aptNo"
+					value="<%= user.address && user.address.aptNo ? user.address.aptNo : '' %>">
+				</li>
+				<li>
+					<label for="city">City</label>
+					<input type="text" name="city"
+					value="<%= user.address && user.address.city ? user.address.city : '' %>"  required>
+				</li>
+				<li>
+					<label for="state">State</label>
+					<input type="text" name="state"
+					value="<%= user.address && user.address.state ? user.address.state : '' %>"  required>
+				</li>
+				<li>
+					<label for="zipcode">Zipcode</label>
+					<input type="text" name="zipcode"
+					value="<%= user.address && user.address.zipcode ? user.address.zipcode : '' %>"  required>
+				</li>
+				<li>
+					<input type="submit" value="Register">
+				</li>
+			</div>
+		</ul>
+	</form>
+</script>

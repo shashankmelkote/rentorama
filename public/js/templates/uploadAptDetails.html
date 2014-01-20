@@ -1,0 +1,63 @@
+<script type="text/template" id="apartment-details-template">
+	<style type="text/css">
+		ul {
+			list-style: none;
+			display: inline-block;
+			margin-left: 30%;
+			margin-right: 30%;
+		}
+
+		.col li {
+			margin: 10px;
+		}
+
+		.col {
+			display: inline;
+			float: left;
+		}
+	</style>
+	<form class="uploadAptDetails">
+		<ul align="right">
+			<div class="col">
+				<li>
+					<label for="rent">Current Rent</label>
+					<input type="text" name="rent"
+					value="<%= user.rent ? user.rent : '' %>"  required>
+				</li>
+				<li>
+					<label for="moveout">Moveout Date</label>
+					<input type="text" name="moveout"
+					value="<%= user.moveout ? user.moveout : '' %>"  required>
+				</li>
+				<li>
+					<label for="neighbourhood">Neighbourhood</label>
+					<input type="text" name="neighbourhood"
+					value="<%= user.neighbourhood ? user.neighbourhood : '' %>"  required>
+				</li>
+				<li>
+					<label for="bed">bedroom</label>
+					<input type="text" name="bed"
+					value="<%= user.bed ? user.bed : 'no of beds undefined' %>"  required>
+				</li>
+				<li>
+					<label for="bath">bathroom</label>
+					<input type="text" name="bath"
+					value="<%= user.bath ? user.bath : '' %>"  required>
+				</li>
+				<li>
+					<label for="headline">headline</label>
+					<input type="text" name="headline"
+					value="<%= user.headline ? user.headline : '' %>"  required>
+				</li>
+				<li>
+					<label for="desc">Description</label>
+					<input type="text" name="desc"
+					value="<%= user.desc ? user.desc : '' %>"  required>
+				</li>
+				<li>
+					<input type="submit" value="Register">
+				</li>
+			</div>
+		</ul>
+	</form>
+</script>

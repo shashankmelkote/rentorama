@@ -1,0 +1,38 @@
+<script type="text/template" id="apartment-images-template">
+    <style type="text/css">
+        ul {
+            list-style: none;
+            display: inline-block;
+            margin-left: 30%;
+            margin-right: 30%;
+        }
+
+        .col li {
+            margin: 10px;
+        }
+
+        .col {
+            display: inline;
+            float: left;
+        }
+
+    </style>
+   <!-- <form class="uploadImages" action="/uploadImage" enctype="multipart/form-data" method="post">-->
+    <!--<form class="uploadImages" enctype="multipart/form-data">
+        <ul align="right">
+            <div class="col">
+                <li>
+                    <input type="file" name="uploadFile" id="uploadFile" multiple="multiple"><br>
+                </li>
+                &lt;!&ndash;<li>
+                    <input type="submit" value="Upload">
+                </li>&ndash;&gt;
+                <li>
+
+                </li>
+            </div>
+        </ul>
+    </form>-->
+    <input id="fileupload" type="file" name="files[]" multiple>
+    <img border="0" src="/image/pulpit" alt="Pulpit rock">
+</script>

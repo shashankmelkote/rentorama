@@ -1,0 +1,64 @@
+<script type="text/template" id="apartment-landlord-template">
+	<style type="text/css">
+		ul {
+			list-style: none;
+			display: inline-block;
+			margin-left: 30%;
+			margin-right: 30%;
+		}
+
+		.col li {
+			margin: 10px;
+		}
+
+		.col {
+			display: inline;
+			float: left;
+		}
+
+	</style>
+	<form class="uploadLandlord">
+		<ul align="right">
+			<div class="col">
+                <li>
+                    <label for="ll_name">Landlord Name</label>
+                    <input type="text" name="ll_name"
+                           value="<%= user.landlord && user.landlord.name ? user.landlord.name : '' %>"  required>
+                </li>
+				<li>
+					<label for="ll_stno">Number</label>
+					<input type="text" name="ll_stno"
+					value="<%= user.landlord && user.landlord.houseno ? user.landlord.houseno : '' %>"  required>
+				</li>
+				<li>
+					<label for="ll_streetName">Street Name</label>
+					<input type="text" name="ll_streetName"
+					value="<%= user.landlord && user.landlord.street ? user.landlord.street : '' %>"  required>
+				</li>
+				<li>
+					<label for="ll_aptNo">Apartment Number</label>
+					<input type="text" name="ll_aptNo"
+					value="<%= user.landlord && user.landlord.aptNo ? user.landlord.aptNo : '' %>">
+				</li>
+				<li>
+					<label for="ll_city">City</label>
+					<input type="text" name="ll_city"
+					value="<%= user.landlord && user.landlord.city ? user.landlord.city : '' %>"  required>
+				</li>
+				<li>
+					<label for="ll_state">State</label>
+					<input type="text" name="ll_state"
+					value="<%= user.landlord && user.landlord.state ? user.landlord.state : '' %>"  required>
+				</li>
+				<li>
+					<label for="ll_zipcode">Zipcode</label>
+					<input type="text" name="ll_zipcode"
+					value="<%= user.landlord && user.landlord.zipcode ? user.landlord.zipcode : '' %>"  required>
+				</li>
+				<li>
+					<input type="submit" value="Register">
+				</li>
+			</div>
+		</ul>
+	</form>
+</script>
