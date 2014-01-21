@@ -1,9 +1,13 @@
-define(['Backbone', 'text!templates/index.html', 'text!templates/login.html', 'text!templates/search.html',
+define(['Backbone', 'views/menu', 'text!templates/index.html', 'text!templates/login.html', 'text!templates/search.html',
     'text!templates/searchResults.html', 'text!templates/maps.html'],
-    function(backbone, indexTemplate, loginTemplate, searchTemplate, searchResultsTemplate, mapTemplate) {
+    function(backbone, menuView, indexTemplate, loginTemplate, searchTemplate, searchResultsTemplate, mapTemplate) {
 
 	var indexView = Backbone.View.extend({
 		el : $('#content'),
+
+        elMenu : $('#topmenu'),
+
+        menuView: null,
 
 		renderMap : function() {
 			//			this.map = new mapView();
@@ -49,6 +53,9 @@ define(['Backbone', 'text!templates/index.html', 'text!templates/login.html', 't
 			this.renderMenuBar();
 			this.renderMapsBox();
 			//this.renderMap();
+
+            this.menuView = new menuView();
+            this.menuView.render();
 			
 		}
 	});

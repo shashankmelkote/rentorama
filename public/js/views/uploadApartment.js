@@ -2,6 +2,7 @@ define(['text!templates/uploadApartment.html', 'text!templates/uploadAptDetails.
     'text!templates/uploadLandlord.html', 'text!templates/uploadAptFacilities.html',
     'text!templates/uploadImages.html'],
     function (aptAddressTemplate, aptDetailsTemplate, aptLandlordTemplate, aptFacilitiesTemplate, aptImagesTemplate) {
+
         var uploadView = Backbone.View.extend({
             el: $('#content'),
 
