@@ -1,8 +1,10 @@
-define(['Backbone', 'text!templates/menu.html'],
-    function (backbone, menuTemplate) {
+define(['Backbone', 'views/uploadApartment', 'views/search','text!templates/menu.html'],
+    function (backbone, uploadView, searchView, menuTemplate) {
 
         var menuView = Backbone.View.extend({
             el: $('#topmenu'),
+
+            contentView: null,
 
             // binding submit button clicks to event handlers
             events: {
@@ -20,6 +22,8 @@ define(['Backbone', 'text!templates/menu.html'],
 
             searchClick: function () {
                 console.log("search button clicked!");
+                this.contentView = new searchView();
+                this.contentView.render();
                 return false;
             },
 
@@ -30,6 +34,8 @@ define(['Backbone', 'text!templates/menu.html'],
 
             uploadClick: function () {
                 console.log("upload apartment button clicked!");
+                this.contentView = new uploadView();
+                this.contentView.render();
                 return false;
             },
 

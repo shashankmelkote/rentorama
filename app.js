@@ -294,6 +294,7 @@ app.post("/uploadImage", function (req, res) {
                 } else {
                     console.log("Successfully uploaded image");
                     Apartment.uploadImage(req.session.email, fileName);
+                    res.send(200);
                 }
             });
         }
@@ -326,9 +327,15 @@ app.get('/image/*?', function(req, res){
 
     console.log("request made to get images");
 
+    var url = req.url;
+    console.log(url);
+    var imgKey = url.substring(url.lastIndexOf("/")+1);
+
+    console.log("Image key : " +imgKey);
+
     var downloadParams = {
         Bucket: 'rentorama',
-        Key: 'e86d1bd1-7238-490c-82d4-aa40e295e86d',
+        Key: imgKey,
         ResponseContentType : 'image/jpeg'
     };
 
@@ -350,7 +357,7 @@ app.get('/image/*?', function(req, res){
 app.get('/*?', function (req, res) {
     console.log('in default case');
     var url = req.url;
-    console.log('request paams are : ' + url);
+    console.log('request params are : ' + url);
     var ext = url.substring(url.lastIndexOf("."));
     if (ext === ".png" || ext === ".jpg") {
         res.sendfile(path.resolve('./assets/images' + url));
